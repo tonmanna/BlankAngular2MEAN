@@ -1,1 +1,2 @@
-docker build -t tonmanna/blankdockermean --force-rm --no-cache .
+docker build -t blankmean2 --force-rm --no-cache .
+

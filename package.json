@@ -3,11 +3,12 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "start webpack --progress --inline & nodemon ./bin/www",
+    "start": "nodemon ./bin/www",
     "test": "karma start",
     "build": "webpack --config config/webpack.prod.js --progress --profile --bail",
     "testnode": "./node_modules/.bin/mocha",
     "post": "typings install",
+    "watch" : "webpack --progress --inline",
     "require": "npm install -g typescript@next && npm install -g karma-cli && npm install webpack -g && npm install typings --global",
     "server": "webpack-dev-server --inline --progress --port 8080"
   },

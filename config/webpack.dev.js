@@ -16,6 +16,8 @@ module.exports = webpackMerge(commonConfig, {
     plugins: [
         new ExtractTextPlugin('[name].css')
     ],
-
-    watch: true
+    watch: true,
+    watchOptions: {
+        poll: true
+    }
 });

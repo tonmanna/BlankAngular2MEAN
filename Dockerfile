@@ -1,5 +1,4 @@
-FROM node:6
-ENV INSTALL_PATH /project
-RUN mkdir $INSTALL_PATH
+FROM tonmanna/blankdockermean
+ADD . $INSTALL_PATH
 WORKDIR $INSTALL_PATH
-RUN npm install devtool -g
+CMD ["./startapp.shgit "]
