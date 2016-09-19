@@ -1,4 +1,4 @@
 FROM tonmanna/blankdockermean
 ADD . $INSTALL_PATH
 WORKDIR $INSTALL_PATH
-CMD ["./startapp.shgit "]
+CMD ["./startapp.sh"]
