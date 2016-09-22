@@ -5,6 +5,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var expressLayouts = require('express-ejs-layouts');
+var compression = require('compression');
 
 var routes = require('./routes/index');
 
@@ -24,6 +25,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/node_modules', express.static(path.resolve('./node_modules')));
+app.use(compression());
 app.use('/', routes);
 
 var routesContactUs = require('./routes/component/contactus');

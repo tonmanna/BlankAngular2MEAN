@@ -1,6 +1,12 @@
 import { Component } from '@angular/core';
+import { MenubarService } from './menubarservice';
 @Component({
     selector : 'menu-bar',
-    templateUrl : './Views/Components/Menu/Menubar.html'
+    templateUrl : './views/components/menu/menubar.html',
+    providers : [MenubarService]
 })
-export class Menubar{}
+export class Menubar{
+    constructor(public menubarservice : MenubarService){
+
+    }
+}
