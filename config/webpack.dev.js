@@ -1,3 +1,4 @@
+var webpack = require('webpack');
 var webpackMerge = require('webpack-merge');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var commonConfig = require('./webpack.common.js');
@@ -10,12 +11,17 @@ module.exports = webpackMerge(commonConfig, {
         path: helpers.root('/public/app'),
         publicPath: '/app',
         filename: '[name].js',
-        chunkFilename: '[id].chunk.js'
+        chunkFilename: '[id].js'
+    },
+
+    htmlLoader: {
+        minimize: false // workaround for ng2
     },
 
     plugins: [
-        new ExtractTextPlugin('[name].css')
+        new ExtractTextPlugin('[name].css'),
     ],
+
     watch: true,
     watchOptions: {
         poll: true
