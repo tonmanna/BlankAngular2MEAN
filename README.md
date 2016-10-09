@@ -15,12 +15,21 @@ Angular TypeScript Source Code จะอยู่ใน /src หนุกหน�
 
 # หรือถ้าจะรันโหมดในเครื่องตัวเองก็ 
 npm install typescript@next -g
+
 npm install karma-cli -g
+
 npm install webpack -g
+
 npm install typings -g
+
 npm install nodemon -g
+
 npm install
+
 typings install
 
 จากนั้นก็ รันสองโปรแกรมครับ
+
 npm run watch && npm start
+
+เข้าที่ http://localhost:3000 เหมือนกัน
