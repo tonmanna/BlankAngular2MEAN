@@ -15,7 +15,7 @@ www.docker.com
 Angular TypeScript Source Code จะอยู่ใน /src นะครับ
 
 ************************************************************************************************
-# หรือถ้าจะรันโหมดในเครื่องตัวเองก็ 
+# หรือถ้าจะรันโหมดในเครื่องตัวเองไม่ผ่าน Docker
 npm install typescript@next -g
 
 npm install karma-cli -g
