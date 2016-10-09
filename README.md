@@ -1,5 +1,9 @@
 # BlankAngular2MEAN
 
+Prerequire Docker.
+www.docker.com
+
+
 #1.Build Images เพื่อเตรียมการใช้งาน
 ./build.sh 
 
