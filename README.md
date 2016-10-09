@@ -1,7 +1,6 @@
 # BlankAngular2MEAN
 
-Prerequire Docker.
-www.docker.com
+***Prerequire Docker. www.docker.com
 
 
 #1.Build Images เพื่อเตรียมการใช้งาน
@@ -16,6 +15,8 @@ Angular TypeScript Source Code จะอยู่ใน /src นะครับ
 
 ************************************************************************************************
 # หรือถ้าจะรันโหมดในเครื่องตัวเองไม่ผ่าน Docker
+***แต่ต้องมี NodeJS + Npm  www.nodejs.org
+
 npm install typescript@next -g
 
 npm install karma-cli -g
