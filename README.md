@@ -10,13 +10,11 @@ www.docker.com
 #2.Develop Images เพื่อเข้าสู่โหมดพัฒนา
 ./dev.sh
 
-http://localhost:3000 จบ
+จากนั้นเข้าใช้งานที่ http://localhost:3000
 
-Angular TypeScript Source Code จะอยู่ใน /src หนุกหนาน
+Angular TypeScript Source Code จะอยู่ใน /src นะครับ
 
-ทำมาเพื่อศึกษาการเรียน Angular 2 ของ Team ต้องมี Docker ก่อนนะเพราะใช้ Image หลักที่ได้เตรียมไว้ให้ที่ https://hub.docker.com/r/tonmanna/blankdockermean/ Image หลักนี้ จะอยู่ใน Folder /docker ซึ่งด้านในก็จะมี bash อีกเพื่อใช้ในการ build image หลักตัวนี้
-
-
+************************************************************************************************
 # หรือถ้าจะรันโหมดในเครื่องตัวเองก็ 
 npm install typescript@next -g
 
@@ -32,8 +30,12 @@ npm install
 
 typings install
 
-จากนั้นก็ รันสองโปรแกรมครับ
+# จากนั้นก็ รันสองโปรแกรมครับ
 
 npm run watch && npm start
 
-เข้าที่ http://localhost:3000 เหมือนกัน
+#เข้าใช่งาน ที่ http://localhost:3000 เหมือนกัน
+
+
+ทำมาเพื่อศึกษาการเรียน Angular 2 ของ Team ต้องมี Docker ก่อนนะครับเพราะใช้ Image หลักที่ได้เตรียมไว้ให้ที่ https://hub.docker.com/r/tonmanna/blankdockermean/ Image หลักนี้ จะอยู่ใน Folder /docker ซึ่งด้านในก็จะมี bash 
+เพื่อใช้ในการ build image หลักตัวนี้
