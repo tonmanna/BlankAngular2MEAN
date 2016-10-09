@@ -20,6 +20,12 @@ module.exports = webpackMerge(commonConfig, {
 
     plugins: [
         new ExtractTextPlugin('[name].css'),
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jquery: "jquery",
+            jQuery: "jquery",
+            "windows.jQuery": "jquery"
+        }),
     ],
 
     watch: true,

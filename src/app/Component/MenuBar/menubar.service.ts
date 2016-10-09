@@ -3,6 +3,5 @@ import { Injectable } from '@angular/core';
 export class MenubarService{
     public menuItem : string[] = ["Home","About Us","Contact Us"];
     constructor(){
-        console.log("ENTER");
-    }
+     }
 }
