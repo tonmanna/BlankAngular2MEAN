@@ -30,6 +30,7 @@
     "express": "~4.13.4",
     "express-ejs-layouts": "^2.2.0",
     "jquery": "^2.0.0",
+    "linebot": "^0.1.0",
     "mocha": "^3.0.2",
     "morgan": "~1.7.0",
     "request": "^2.74.0",
