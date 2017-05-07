@@ -1,33 +1,31 @@
 var webpack = require('webpack');
 var webpackMerge = require('webpack-merge');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var commonConfig = require('./webpack.common.js');
 var helpers = require('./helpers');
+var path = require('path');
+const ENV = process.env.NODE_ENV = process.env.ENV = 'development';
 
 module.exports = webpackMerge(commonConfig, {
-    devtool: 'cheap-module-eval-source-map',
 
+    devtool: 'cheap-module-eval-source-map',
     output: {
         path: helpers.root('/public/app'),
-        publicPath: '/app',
         filename: '[name].js',
         chunkFilename: '[id].js'
     },
-
-    htmlLoader: {
-        minimize: false // workaround for ng2
-    },
-
     plugins: [
-        new ExtractTextPlugin('[name].css'),
         new webpack.ProvidePlugin({
             $: "jquery",
-            jquery: "jquery",
-            jQuery: "jquery",
-            "windows.jQuery": "jquery"
+            jquery: "jquery"
         }),
-    ],
+        new webpack.LoaderOptionsPlugin({
+            options: {
+                htmlLoader: {
 
+                }
+            }
+        })
+    ],
     watch: true,
     watchOptions: {
         poll: true

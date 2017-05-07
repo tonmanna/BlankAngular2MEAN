@@ -2,6 +2,8 @@ import { Injectable }     from '@angular/core';
 import { Http,Response,Headers,RequestOptions } from '@angular/http';
 import { ContactUsModel } from './contactus.model';
 import { Observable }     from 'rxjs/Observable';
+import 'rxjs/Rx';
+//TODO :: Vendor Webpack ต้องไปดูใหม่
 @Injectable()
 export class ContactUsService {
     constructor (private http: Http) {}

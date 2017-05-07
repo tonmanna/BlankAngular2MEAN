@@ -15,22 +15,7 @@ Angular TypeScript Source Code จะอยู่ใน /src นะครับ
 
 ************************************************************************************************
 # หรือถ้าจะรันโหมดในเครื่องตัวเองไม่ผ่าน Docker
-***แต่ต้องมี NodeJS + Npm  www.nodejs.org
-
-npm install typescript@next -g
-
-npm install karma-cli -g
-
-npm install webpack -g
-
-npm install typings -g
-
-npm install nodemon -g
-
 npm install
-
-typings install
-
 # จากนั้นก็ รันสองโปรแกรมครับ
 
 npm run watch && npm start

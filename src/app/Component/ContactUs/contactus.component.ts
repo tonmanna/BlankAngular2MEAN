@@ -2,6 +2,7 @@ import {Component, OnInit } from '@angular/core';
 
 import {ContactUsModel} from './contactus.model'
 import {ContactUsService} from './contactus.service'
+
 @Component({
     selector : 'contact-us',
     template : `
