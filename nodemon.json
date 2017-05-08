@@ -1,4 +1,4 @@
 {
-  "verbose": true,
-  "ignore": ["src","./public"]
+    "verbose": true,
+    "ignore": ["src", "dist"]
 }

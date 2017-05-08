@@ -8,9 +8,9 @@ import { Routing } from './app.routes';
 import { Homepage } from './Page/homepage'
 import { Configpage } from './Page/configpage'
 
-
 import { Menubar} from './Component/MenuBar/menubar.component'
 import { ContactUs} from './Component/ContactUs/contactus.component'
+
 @NgModule({
     imports: [
         BrowserModule,

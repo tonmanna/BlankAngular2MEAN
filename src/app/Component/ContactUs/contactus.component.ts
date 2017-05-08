@@ -74,7 +74,7 @@ export class ContactUs implements OnInit{
     };
 
     ngOnInit(){
-        this.getSample()
+        this.getSample();
     };
 
 }
