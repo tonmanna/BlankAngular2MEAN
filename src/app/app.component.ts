@@ -1,5 +1,4 @@
 import { Component,ViewEncapsulation  } from '@angular/core';
-import '../assest/css/styles.css';
 declare var $:any;
 @Component({
     selector: 'my-app',
@@ -8,5 +7,7 @@ declare var $:any;
 })
 export class AppComponent {
     constructor(){
+        $("body").append("HELLO");
+        console.log("TONMAN");
     }
 }

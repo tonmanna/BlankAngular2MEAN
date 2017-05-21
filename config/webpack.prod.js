@@ -30,11 +30,8 @@ module.exports = webpackMerge(commonConfig, {
         }),
         new webpack.ProvidePlugin({
             $: "jquery",
-            jquery: "jQuery"
-        }),
-        new webpack.ProvidePlugin({
-            $: "jquery",
             jQuery: "jquery",
+            jquery: "jquery",
             "window.jQuery": "jquery",
             Tether: "tether",
             "window.Tether": "tether",

@@ -6,8 +6,7 @@
     "start": "nodemon app.js",
     "testnode": "./node_modules/.bin/mocha",
     "build": "./node_modules/.bin/webpack --config config/webpack.prod.js",
-    "watch": "./node_modules/.bin/webpack",
-    "testng": "karma start"
+    "watch": "./node_modules/.bin/webpack"
   },
   "dependencies": {
     "@angular/common": "^4.1.1",
@@ -25,6 +24,7 @@
     "bootstrap": "^3.3.7",
     "bootstrap-loader": "^2.1.0",
     "bootstrap-sass": "^3.3.7",
+    "bulma": "^0.4.1",
     "compression": "^1.6.2",
     "cookie-parser": "~1.4.3",
     "core-js": "^2.4.1",
@@ -38,6 +38,7 @@
     "resolve-url-loader": "^2.0.2",
     "rxjs": "5.3.1",
     "serve-favicon": "~2.4.2",
+    "style-loader": "^0.17.0",
     "zone.js": "^0.8.10"
   },
   "devDependencies": {

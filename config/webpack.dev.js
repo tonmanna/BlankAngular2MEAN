@@ -15,7 +15,8 @@ module.exports = webpackMerge(commonConfig, {
     plugins: [
         new webpack.ProvidePlugin({
             $: "jquery",
-            jquery: "jquery"
+            jQuery: "jquery",
+            jquery: 'jquery'
         }),
         new HtmlWebpackPlugin({
             template: './src/index.html',

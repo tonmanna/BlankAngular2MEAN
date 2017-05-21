@@ -21,7 +21,7 @@ app.use('/contactus', routesContactUs);
 
 
 app.use(express.static(path.join(__dirname, 'dist')));
-app.get("/", function response(req, res) {
+app.use(function response(req, res, next) {
     res.sendFile(path.join(__dirname, 'dist/index.html'));
 });
 app.listen(3000);

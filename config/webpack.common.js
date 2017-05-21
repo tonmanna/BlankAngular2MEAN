@@ -8,6 +8,7 @@ module.exports = {
     entry: {
         'app': './src/main.ts',
         'polyfills': './src/polyfills.ts',
+        'vendor': './src/vendor.ts',
         'twbs': 'bootstrap-loader'
     },
     output: {

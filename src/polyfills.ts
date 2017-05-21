@@ -21,16 +21,10 @@ import '@angular/common';
 
 import '@angular/http';
 import '@angular/router';
+
 // RxJS
 //import 'rxjs';
 import 'rxjs/Rx';
-
-// Other vendors for example jQuery, Lodash or Bootstrap
-// You can import js, ts, css, sass, ...
-
-import 'jquery/dist/jquery.min.js';
-import 'bootstrap/dist/js/bootstrap.js';
-import 'bootstrap/dist/css/bootstrap.css';
 
 if (process.env.ENV === 'production') {
     
