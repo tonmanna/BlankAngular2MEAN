@@ -8,8 +8,7 @@ module.exports = {
     entry: {
         'app': './src/main.ts',
         'polyfills': './src/polyfills.ts',
-        'vendor': './src/vendor.ts',
-        'twbs': 'bootstrap-loader'
+        'vendor': './src/vendor.ts'
     },
     output: {
         path: helpers.root('/dist'),
@@ -33,15 +32,23 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                use: ['raw-loader']
+                loader: ['to-string-loader', 'style-loader', 'css-loader']
             },
             {
                 test: /\.scss$/,
-                use: ['raw-loader', 'sass-loader']
-            },
-            {
-                test: /bootstrap\/dist\/js\/umd\//,
-                use: 'imports-loader?jQuery=jquery'
+                use: [{
+                    loader: "style-loader"
+                }, {
+                    loader: "css-loader",
+                    options: {
+                        sourceMap: true
+                    }
+                }, {
+                    loader: "sass-loader",
+                    options: {
+                        sourceMap: true
+                    }
+                }]
             },
             {
                 test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,

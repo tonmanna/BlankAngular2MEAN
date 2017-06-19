@@ -4,7 +4,9 @@ var commonConfig = require('./webpack.common.js');
 var helpers = require('./helpers');
 var path = require('path');
 const ENV = process.env.NODE_ENV = process.env.ENV = 'development';
+
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var LiveReloadPlugin = require('webpack-livereload-plugin');
 
 module.exports = webpackMerge(commonConfig, {
     devtool: 'cheap-module-eval-source-map',
@@ -40,6 +42,9 @@ module.exports = webpackMerge(commonConfig, {
             Scrollspy: "exports-loader?Scrollspy!bootstrap/js/dist/scrollspy",
             Tab: "exports-loader?Tab!bootstrap/js/dist/tab",
             Util: "exports-loader?Util!bootstrap/js/dist/util"
+        }),
+        new LiveReloadPlugin({
+            appendScriptTag: true
         })
     ]
 });

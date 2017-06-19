@@ -24,6 +24,6 @@ app.use(express.static(path.join(__dirname, 'dist')));
 app.use(function response(req, res, next) {
     res.sendFile(path.join(__dirname, 'dist/index.html'));
 });
-app.listen(3000);
+app.listen(3001);
 
 module.exports = app;
