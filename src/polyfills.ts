@@ -23,12 +23,11 @@ import '@angular/http';
 import '@angular/router';
 
 // RxJS
-//import 'rxjs';
+// import 'rxjs';
 import 'rxjs/Rx';
 
 if (process.env.ENV === 'production') {
-    
-}else{
+}else {
     Error.stackTraceLimit = Infinity;
     require('zone.js/dist/long-stack-trace-zone');
 }
