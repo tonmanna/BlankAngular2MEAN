@@ -6,7 +6,22 @@ Angular TypeScript Source Code จะอยู่ใน /src นะครับ
 
 ************************************************************************************************
 npm install
-npm start
+
+// For start API
+npm start 
+// For start Typescript / Watch
+npm run watch
+
+// For Build Typescript 
+npm run build
+
+
+//Test TSLINT
+npm run tslint
+
+//Test ESLINT
+npm run eslint
+
 
 #เข้าใช่งาน ที่ http://localhost:3000 เหมือนกัน
 
