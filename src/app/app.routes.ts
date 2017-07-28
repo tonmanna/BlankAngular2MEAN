@@ -1,11 +1,11 @@
-import { Routes, RouterModule } from '@angular/router';
-import { HomepageComponent } from './Page/homepage';
-import { ConfigpageComponent } from './Page/configpage'
+import { Routes, RouterModule } from "@angular/router";
+import { HomePageComponent } from "./Component/HomePage";
+import { ConfigPageComponent } from "./Component/ConfigPage";
 
 const routes: Routes = [
-    {path: '', redirectTo: 'homepage', pathMatch : 'full'},
-    {path: 'homepage', component: HomepageComponent, data: {storiesType: 'news'}},
-    {path: 'homepage/:id', component: ConfigpageComponent}
+    {path: "", redirectTo: "homepage", pathMatch : "full"},
+    {path: "homepage", component: HomePageComponent, data: {storiesType: "news"}},
+    {path: "homepage/:id", component: ConfigPageComponent}
 ];
 
 export const Routing = RouterModule.forRoot(routes);

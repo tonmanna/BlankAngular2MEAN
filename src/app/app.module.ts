@@ -1,15 +1,15 @@
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms'
-import { BrowserModule } from '@angular/platform-browser';
-import { HttpModule, JsonpModule } from '@angular/http';
+import { NgModule } from "@angular/core";
+import { FormsModule } from "@angular/forms";
+import { BrowserModule } from "@angular/platform-browser";
+import { HttpModule, JsonpModule } from "@angular/http";
 
-import { AppComponent } from './app.component';
-import { Routing } from './app.routes';
-import { HomepageComponent } from './Page/homepage'
-import { ConfigpageComponent } from './Page/configpage'
+import { AppComponent } from "./app.component";
+import { Routing } from "./app.routes";
+import { HomePageComponent } from "./Component/HomePage";
+import { ConfigPageComponent } from "./Component/ConfigPage";
 
-import { MenubarComponent} from './Component/MenuBar/menubar.component'
-import { ContactUsComponent} from './Component/ContactUs/contactus.component'
+import { MenubarComponent } from "./Component/MenuBar";
+import { ContactUsComponent } from "./Component/ContactUs";
 
 @NgModule({
     imports: [
@@ -23,9 +23,9 @@ import { ContactUsComponent} from './Component/ContactUs/contactus.component'
         AppComponent,
         MenubarComponent,
         ContactUsComponent,
-        HomepageComponent,
-        ConfigpageComponent
+        HomePageComponent,
+        ConfigPageComponent
     ],
-    bootstrap: [ AppComponent ]
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

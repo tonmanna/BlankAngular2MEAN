@@ -1,11 +1,11 @@
-import {Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
-import {ContactUsModel} from './contactus.model'
-import {ContactUsService} from './contactus.service'
+import { ContactUsModel } from "./contactus.model";
+import { ContactUsService } from "./contactus.service";
 
 @Component({
-    selector : 'app-contact-us',
-    template : `
+    selector: "contact-us",
+    template: `
     <div class="row">
         <div class="col-md-6 col-lg-6" style="border:solid 1px #ececec;padding: 20px">
             <div class="form-group">
@@ -39,41 +39,41 @@ import {ContactUsService} from './contactus.service'
     providers: [ContactUsService]
 })
 export class ContactUsComponent implements OnInit {
-    errorMessage: string;
-    fromTextModel: string;
-    fromSubjectModel: string;
-    fromMessageModel: string;
-    contactus: ContactUsModel;
+    public errorMessage: string;
+    public fromTextModel: string;
+    public fromSubjectModel: string;
+    public fromMessageModel: string;
+    public contactus: ContactUsModel;
 
     constructor(private contactusservice: ContactUsService) {
-        this.clearModel()
-    };
-
-    clearModel() {
-        this.fromTextModel = '';
-        this.fromSubjectModel = '';
-        this.fromMessageModel = '';
+        this.clearModel();
     }
 
-    onClick(from: string, subject: string, message: string) {
+    public clearModel() {
+        this.fromTextModel = "";
+        this.fromSubjectModel = "";
+        this.fromMessageModel = "";
+    }
+
+    public onClick(from: string, subject: string, message: string) {
         const postData = new ContactUsModel();
         postData.from = from;
         postData.subject = subject;
         postData.message = message;
-        this.contactusservice.setContactUs(postData).subscribe( (x) => {
+        this.contactusservice.setContactUs(postData).subscribe((x) => {
             alert(x);
             this.clearModel();
         });
-    };
+    }
 
-    getSample() {
+    public getSample() {
         this.contactusservice.getContactUs()
-            .subscribe(
-                contactusmodel => this.contactus = <ContactUsModel>contactusmodel,
-                error =>  this.errorMessage = <any>error);
-    };
+             .subscribe(
+                contactusmodel => this.contactus = contactusmodel as ContactUsModel,
+                error =>  this.errorMessage = error as any);
+    }
 
-    ngOnInit() {
+    public ngOnInit() {
         this.getSample();
-    };
+    }
 }
