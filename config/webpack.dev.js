@@ -1,4 +1,3 @@
-var webpack = require("webpack");
 var webpackMerge = require("webpack-merge");
 var commonConfig = require("./webpack.common.js");
 var HtmlWebpackPlugin = require("html-webpack-plugin");
@@ -12,9 +11,7 @@ module.exports = webpackMerge(commonConfig, {
         poll: true
     },
     plugins: [
-        new webpack.ProvidePlugin({ $: "jquery", jQuery: "jquery", jquery: "jquery" }),
         new HtmlWebpackPlugin({ template: "./src/index.html", inject: "body", filename: "index.html" }),
-        new webpack.ProvidePlugin({ swal: "swal", $: "jquery", jQuery: "jquery", jquery: "jquery", "window.jQuery": "jquery" }),
         new LiveReloadPlugin({ appendScriptTag: true }),
         new TsConfigPathsPlugin({ tsconfig: "tsconfig.json", compiler: "typescript" })
     ]

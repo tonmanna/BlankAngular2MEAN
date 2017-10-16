@@ -8,16 +8,12 @@ var TsConfigPathsPlugin = require("awesome-typescript-loader").TsConfigPathsPlug
 module.exports = webpackMerge(commonConfig, {
     devtool: "source-map",
     plugins: [
-        new webpack
-        .optimize
-        .UglifyJsPlugin({
+        new webpack.optimize.UglifyJsPlugin({
             mangle: {
                 keep_fnames: true
             }
         }),
-        new webpack
-        .optimize
-        .CommonsChunkPlugin({
+        new webpack.optimize.CommonsChunkPlugin({
             name: [
                 "app", "polyfills", "vendor"
             ],
@@ -29,7 +25,6 @@ module.exports = webpackMerge(commonConfig, {
             }
         }),
         new HtmlWebpackPlugin({ template: "./src/index.html", inject: "body", filename: "index.html" }),
-        new webpack.ProvidePlugin({ swal: "swal", $: "jquery", jQuery: "jquery", jquery: "jquery", "window.jQuery": "jquery" }),
         new TsConfigPathsPlugin({ tsconfig: "tsconfig.json", compiler: "typescript" })
     ]
 });

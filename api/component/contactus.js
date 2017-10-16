@@ -1,5 +1,5 @@
-var express = require("express");
-var router = express.Router();
+import express from 'express';
+const router = express.Router();
 
 router.get("/getContactUs", (req, res) => {
     var result = {};
@@ -14,8 +14,7 @@ router.post("/setContactUs", (req, res) => {
     result.from = req.body.from;
     result.subject = req.body.subject;
     result.message = req.body.message;
-    console.log(result);
     res.send("GOOD");
 });
 
-module.exports = router;
+export const RouterContactUs = router;

@@ -6,3 +6,5 @@ npm-debug.log
 npm-debug.log*
 public
 dist
+yarn-error.log
+yarn.lock

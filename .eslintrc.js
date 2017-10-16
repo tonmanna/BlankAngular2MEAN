@@ -4,6 +4,9 @@ module.exports = {
         "es6": true,
         "node": true
     },
+    "parserOptions": {
+        "sourceType": "module"
+    },
     "extends": "eslint:recommended",
     "rules": {
         "accessor-pairs": "error",
@@ -223,7 +226,6 @@ module.exports = {
             "error",
             "last"
         ],
-        "sort-imports": "error",
         "sort-keys": "off",
         "sort-vars": "off",
         "space-before-blocks": "off",
